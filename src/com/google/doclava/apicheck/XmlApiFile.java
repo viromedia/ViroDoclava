@@ -59,6 +59,7 @@ class XmlApiFile extends DefaultHandler {
       apiInfo.resolveInterfaces();
       return apiInfo;
     } catch (Exception e) {
+      e.printStackTrace();
       throw new ApiParseException("Error parsing API", e);
     }
   }

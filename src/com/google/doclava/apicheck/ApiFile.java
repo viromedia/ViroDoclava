@@ -474,7 +474,7 @@ class ApiFile {
       } else if ("char".equals(type)) {
         return new Integer((char)Integer.parseInt(val));
       } else if ("java.lang.String".equals(type)) {
-        if ("null".equals(val)) {
+        if (val.length() <= 1 || "null".equals(val)) {
           return null;
         } else {
           return FieldInfo.javaUnescapeString(val.substring(1, val.length()-1));

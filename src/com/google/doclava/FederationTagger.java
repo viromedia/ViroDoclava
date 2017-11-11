@@ -84,6 +84,7 @@ public final class FederationTagger {
         if (e.getMessage() != null) {
           error += ": " + e.getMessage();
         }
+        e.printStackTrace();
         Errors.error(Errors.NO_FEDERATION_DATA, (SourcePositionInfo) null, error);
       }
     }
